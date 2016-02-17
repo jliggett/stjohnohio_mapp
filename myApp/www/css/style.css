@@ -1,0 +1,40 @@
+/* Empty. Add your own CSS if you like */
+h1 {color:#3d2415;}
+h2 {font-size:225%;font-weight:normal; max-width:100%; text-align:center;}
+h4, h5, h6 {font-family: "Fjalla One", sans-serif; font-weight:normal; font-size:1.5vw; position:absolute; color:#ffffff;}
+address a:link{color:#077c15; text-decoration:none; border-bottom:0;}
+address a:visited{color:#077c15; text-decoration:none; border-bottom:0;}
+address a:hover{color:#f09f34; text-decoration:none; border-bottom:0;}
+address a:active{color:#f09f34; text-decoration:none; border-bottom:0;}
+address a:focus{color:#f09f34; text-decoration:none; border-bottom:0;}
+span {color:#f09926;}
+
+.background {
+    background-color: #3d2415;;
+    background-image: url("front.jpg");
+}
+
+.list {
+	padding-top: 50px;
+}
+
+.item {
+	padding:1px;
+}
+
+.item.item-image {
+	border-color: rgba(0, 0, 0, 0);
+	background-color: rgba(0, 0, 0, 0);	
+}
+
+.item.item-trns {
+	border-color: rgba(0, 0, 0, 0);
+	background-color: rgba(0, 0, 0, 0); 
+	color: rgba(0, 0, 0, 0);
+	padding-top: 0px;
+	opacity: 0.7;
+}
+
+.button {
+	width:100%;	
+}
