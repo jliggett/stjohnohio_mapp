@@ -1,25 +1,12 @@
 Events
   - push notifications when new events are added
   - push notifications when an event is upcoming
+  - use google calendar API to list events as cards
 Podcasts
   - push notification when podcast is added
+  - need to research which API should be used
 Give
 Contact Us
 Facebook/Twitter links
 
 
-ionic instructs
-
-+---------------------------------------------------------+
-+ New Ionic Updates for February 2016
-+
-+ The View App just landed. Preview your apps on any device
-+ http://view.ionic.io
-+
-+ Invite anyone to preview and test your app
-+ ionic share EMAIL
-+
-+ Generate splash screens and icons with ionic resource
-+ http://ionicframework.com/blog/automating-icons-and-splash-screens/
-+
-+---------------------------------------------------------+
