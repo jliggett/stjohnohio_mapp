@@ -1,21 +1,36 @@
 // Ionic App
 
-angular.module('ionicApp', ['ionic'])
+angular.module('ionicApp', ['ionic']) 
 
-.run(function($ionicPlatform) {
-  $ionicPlatform.ready(function() {
-    if(window.cordova && window.cordova.plugins.Keyboard) {
-      // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
-      // for form inputs)
-      cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
-
-      // Don't remove this line unless you know what you are doing. It stops the viewport
-      // from snapping when text inputs are focused. Ionic handles this internally for
-      // a much nicer keyboard experience.
-      cordova.plugins.Keyboard.disableScroll(true);
+.controller('MyCtrl', function($scope) {
+  $scope.groups = [];
+  var myStringArray = ["Events","Podcasts","Give","Contact Us"]
+  var myColors = ["#497094","#367ccf","#3d2415","#eaeae4"]
+  var arrayLength = myStringArray.length;
+  for (var i=0; i<arrayLength; i++) {
+    $scope.groups[i] = {
+      name: myStringArray[i],
+      color: myColors[i],
+      items: []
+    };
+    for (var j=0; j<3; j++) {
+      $scope.groups[i].items.push(i + '-' + j);
     }
-    if(window.StatusBar) {
-      StatusBar.styleDefault();
+  }
+  
+  /*
+   * if given group is the selected group, deselect it
+   * else, select the given group
+   */
+  $scope.toggleGroup = function(group) {
+    if ($scope.isGroupShown(group)) {
+      $scope.shownGroup = null;
+    } else {
+      $scope.shownGroup = group;
     }
-  });
-})
+  };
+  $scope.isGroupShown = function(group) {
+    return $scope.shownGroup === group;
+  };
+  
+});

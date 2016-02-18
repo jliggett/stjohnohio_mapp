@@ -1,4 +1,4 @@
-/* Empty. Add your own CSS if you like */
+
 h1 {color:#3d2415;}
 h2 {font-size:225%;font-weight:normal; max-width:100%; text-align:center;}
 h4, h5, h6 {font-family: "Fjalla One", sans-serif; font-weight:normal; font-size:1.5vw; position:absolute; color:#ffffff;}
@@ -10,31 +10,41 @@ address a:focus{color:#f09f34; text-decoration:none; border-bottom:0;}
 span {color:#f09926;}
 
 .background {
-    background-color: #3d2415;;
-    background-image: url("front.jpg");
-}
-
-.list {
-	padding-top: 50px;
-}
-
-.item {
-	padding:1px;
+    background-color: #264040;
 }
 
 .item.item-image {
-	border-color: rgba(0, 0, 0, 0);
-	background-color: rgba(0, 0, 0, 0);	
+  border-color: rgba(0, 0, 0, 0);
+  padding-bottom: 38px;
 }
 
-.item.item-trns {
-	border-color: rgba(0, 0, 0, 0);
-	background-color: rgba(0, 0, 0, 0); 
-	color: rgba(0, 0, 0, 0);
-	padding-top: 0px;
-	opacity: 0.7;
+.item.item-stable {
+    border-color: #b2b2b2;
+    background-color: #264040;
+    color: white;
+    opacity: 0.7;
 }
 
-.button {
-	width:100%;	
+.item.active.item-stable {
+    border-color: #b2b2b2;
+    background-color: #264040;
+    color: white;
+    opacity: 0.5;
+}
+
+/*
+ * http://docs.angularjs.org/api/ng/directive/ngShow#usage_animations
+ */
+.list .item.item-accordion {
+  line-height: 38px;
+  padding-top: 0;
+  padding-bottom: 0;
+  transition: 0.09s all linear;
+}
+.list .item.item-accordion.ng-hide {
+  line-height: 0px;
+}
+.list .item.item-accordion.ng-hide-add,
+.list .item.item-accordion.ng-hide-remove {
+  display: block !important;
 }
